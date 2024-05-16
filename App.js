@@ -6,18 +6,27 @@
  *      </div>
  * </div>
 **/
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const nestedEle = React.createElement(
-    "div",
-    { id: "parent" },
-    React.createElement(
-    "div",
-    { id: "child" },
-    [React.createElement("h1",{ id: "h1tag" },"I am an h1 tag"),
-     React.createElement("h2",{ id: "h2tag" },"I am an h2 tag")])
+//const heading = <img src="https://namastedevprod.s3.ap-south-1.amazonaws.com/banner+and+logos/name.png"></img>;
+
+//assignment2
+// Create a Header Component from scratch using Functional Components with
+// JSX
+// ○ Add a Logo on left
+// ○ Add a search bar in middle
+// ○ Add User icon on right
+// ○ Add CSS to make it look nice
+
+const HeaderComponent = () =>(
+<div className="main">
+    <img src="https://namastedevprod.s3.ap-south-1.amazonaws.com/banner+and+logos/name.png"></img>
+    <input type="search" id="search" placeholder="Search"></input>
+    <i className="fa-sharp fa-solid fa-user"></i>
+    </div>
 );
-console.log(nestedEle)
 
-//const ele = React.createElement("h1",{id:"heading"},"Hello World !!");//creating html tag or creating html elements
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(nestedEle);
+
+root.render(<HeaderComponent />);

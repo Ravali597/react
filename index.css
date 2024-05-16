@@ -1,3 +1,21 @@
-#heading{
-    color: red;
+body {
+    padding: 0;
+    margin: 0;
+}
+.main {
+    display: flex;
+    align-items: center;
+    background: #092a46;
+}
+#search {
+    width: 50%;
+    height: 45px;
+    border: 1px solid #092a46;
+    margin: 0 39px;
+    border-radius: 8px;
+    padding: 10px;
+
+}
+i {
+    color: #fff;
 }
