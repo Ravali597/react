@@ -15,6 +15,9 @@ body {
     width: 80px;
     height: auto;
 }
+.text-center {
+    text-align: center;
+}
 .align-center {
     align-items: center;
 }
@@ -35,14 +38,22 @@ body {
     align-items: center;
     justify-content: center;
 }
-.search-input {
-    padding: 0 20px;
-    border-radius: 5px;
-    width: 50%;
-    height: 40px;
+.search-input,.sort_text {
+    font-weight: bold;
     border: 1px solid #decaca;
+    border-radius: 5px;
+    width: 10%;
+    height: 40px;
     margin-right: 30px;
+    padding: 0 20px;
+    font-size: 14px;
+    background: #f1f1f1;
 }
+.search-input:hover,.sort_text:hover,
+.search-input:active,.sort_text:active    {
+    background-color: #8a97b5;
+}
+
 h3.titleres {
     padding-left: 10px;
     margin: 10px 0;
@@ -80,3 +91,31 @@ p.time {
     flex-wrap: wrap;
     justify-content: center;
 }
+.slider-content img {
+    margin: 0 20px;
+}
+.slider {
+    width: 1200px;
+    margin: auto;
+    overflow: scroll hidden;
+}
+/*scroll bar*/
+::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+    /* height: 10px; */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #eee0e0; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+    border: 5px solid #f1f1f1; /* Padding around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Hover state for the scrollbar thumb */
+}
+

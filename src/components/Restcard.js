@@ -2,6 +2,7 @@ import { CND_IMG } from "../utils/contant";
 import { STAR_LOGO } from "../utils/contant";
 
 const RestCard = ({ resObj }) => {
+    // console.log(resObj)
     const {cloudinaryImageId, name, avgRating, deliveryTime,cuisines } = resObj?.info
     return (
         <div className="rest-card">
