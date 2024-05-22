@@ -1,5 +1,7 @@
 import { LOGO_URL } from "../utils/contant";
+import { useState } from "react";
 const Header = () => {
+const [btnNameChange, setbtnNameChange] = useState("Login");
     return (
         <div className="header d-flex justify-between align-center">
             <div className="logo">
@@ -10,6 +12,9 @@ const Header = () => {
                     <li>About us</li>
                     <li>Conatct</li>
                     <li>Cart</li>
+                    <li><button className="login" onClick={()=>{
+                        btnNameChange === "Login" ? setbtnNameChange("Logout") : setbtnNameChange("Login");
+                    }}>{btnNameChange}</button></li>
                 </ul>
             </div>
         </div>
