@@ -10,7 +10,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header.js";
 import Body from "./components/Body.js";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "./components/About.js";
+import Error from "./components/Error.js";
 const Main = () => {
     return (
         <div className="main">
@@ -20,7 +22,17 @@ const Main = () => {
         </div>
     );
 };
-
+const routing = createBrowserRouter([
+    {
+        path: "/",
+        element: <Main />,
+        errorElement: <Error />
+},
+{
+    path: "/about",
+    element: <About />
+}]
+)
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Main />);
+root.render(<RouterProvider router={routing} />);
