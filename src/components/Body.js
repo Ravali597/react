@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 // import {resList} from "../utils/mockData";
 import Slider from "./Slider";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 // import { sliderList } from "../utils/mockData";
 
 const Body = () => {
@@ -86,7 +87,7 @@ setsliderList(json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.inf
                     </button> */}
             </div>
             <div className="res-container">
-                {filteredRest.map((data)=><RestCard key={data.info.id} resObj = {data}/>)}
+                {filteredRest.map((data)=><Link key={data.info.id} className="rest-card" to={"/restaurant/"+data.info.id}><RestCard  resObj = {data}/></Link>)}
             </div>
         </div>
     );

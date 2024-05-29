@@ -10,14 +10,17 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header.js";
 import Body from "./components/Body.js";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./components/About.js";
 import Error from "./components/Error.js";
+import Contact from "./components/Contact.js";
+import Restaurantinfo from "./components/Restaurantinfo.js"; 
+// import DummyRestInfo from "./components/DummyRestInfo.js"; 
 const Main = () => {
     return (
         <div className="main">
             <Header  />
-            <Body />
+            <Outlet />
             {/* <Footer /> */}
         </div>
     );
@@ -26,13 +29,31 @@ const routing = createBrowserRouter([
     {
         path: "/",
         element: <Main />,
+        children: [
+            {
+                path: "/",
+                element: <Body />
+            },
+            {
+                path: "/about",
+                element: <About />
+            },
+            {
+                path: "/contact",
+                element: <Contact />
+            },
+            {
+                path: "/restaurant/:resId", // wE have to use :before
+                element: <Restaurantinfo />
+            }
+            // {
+            //     path: "/dummyrest/:resId",
+            //     element: <DummyRestInfo />
+            // }
+        ],
         errorElement: <Error />
 },
-{
-    path: "/about",
-    element: <About />
-}]
+]
 )
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 root.render(<RouterProvider router={routing} />);

@@ -1,5 +1,6 @@
 import { LOGO_URL } from "../utils/contant";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Header = () => {
 const [btnNameChange, setbtnNameChange] = useState("Login");
     return (
@@ -9,8 +10,9 @@ const [btnNameChange, setbtnNameChange] = useState("Login");
             </div>
             <div className="nav-items">
                 <ul className="d-flex justify-between fs-22">
-                    <li>About us</li>
-                    <li>Conatct</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About us</Link></li>
+                    <li><Link to="/contact">Conatct</Link></li>
                     <li>Cart</li>
                     <li><button className="login" onClick={()=>{
                         btnNameChange === "Login" ? setbtnNameChange("Logout") : setbtnNameChange("Login");

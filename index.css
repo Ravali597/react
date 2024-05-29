@@ -151,3 +151,18 @@ p.time {
     border-radius: 4px;
     color: #fefefe;
 }
+.d-block {
+    display: block;
+}
+.rest-item-container {
+    width: 900px;
+    display: block;
+    margin: auto;
+}
+/* .rest-item-container {
+
+} */
+a {
+    text-decoration: none;
+    color: black;
+}

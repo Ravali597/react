@@ -5,7 +5,7 @@ const RestCard = ({ resObj }) => {
     // console.log(resObj)
     const {cloudinaryImageId, name, avgRating, deliveryTime,cuisines } = resObj?.info
     return (
-        <div className="rest-card">
+        <div>
             <div className="image">
                 <img src={CND_IMG+cloudinaryImageId}></img>
                 <h3 className="titleres">{name}</h3>
