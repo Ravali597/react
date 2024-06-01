@@ -166,3 +166,29 @@ a {
     text-decoration: none;
     color: black;
 }
+.main-card {
+    border-bottom: 1px solid #8a97b5;
+    margin: 20px;
+}
+.main-card p.desc {
+    padding: 5px 60px 20px 0;
+}
+img.star-img {
+    padding-right: 5px;
+}
+.bestsel {
+    color: red;
+    margin: 0;
+}
+.main-card h2{
+    margin-top: 5px;
+}
+.text-recom, .veg-btn, .nonveg-btn {
+    margin: 10px;
+}
+.veg-btn, .nonveg-btn {
+    cursor: pointer;
+}
+.text-recom {
+    color: red
+}

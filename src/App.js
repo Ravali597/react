@@ -46,10 +46,6 @@ const routing = createBrowserRouter([
                 path: "/restaurant/:resId", // wE have to use :before
                 element: <Restaurantinfo />
             }
-            // {
-            //     path: "/dummyrest/:resId",
-            //     element: <DummyRestInfo />
-            // }
         ],
         errorElement: <Error />
 },

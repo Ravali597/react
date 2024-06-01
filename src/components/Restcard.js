@@ -3,7 +3,8 @@ import { STAR_LOGO } from "../utils/contant";
 
 const RestCard = ({ resObj }) => {
     // console.log(resObj)
-    const {cloudinaryImageId, name, avgRating, deliveryTime,cuisines } = resObj?.info
+    const {cloudinaryImageId, name, avgRating, sla,cuisines } = resObj?.info
+   // console.log(resObj?.info)
     return (
         <div>
             <div className="image">
@@ -16,7 +17,7 @@ const RestCard = ({ resObj }) => {
                     src={STAR_LOGO}
                 ></img>
                 <p className="rating">{avgRating}</p>
-                <p className="time">{deliveryTime} Minutes</p>
+                <p className="time">{sla.deliveryTime} Minutes</p>
             </div>
             <p className="types">{cuisines.join(", ")}</p>
         </div>
